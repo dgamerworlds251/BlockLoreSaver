@@ -74,8 +74,7 @@ public class LoreBlockSaver extends JavaPlugin implements Listener {
             ItemStack drop = new ItemStack(block.getType());
             ItemMeta meta = drop.getItemMeta();
             if (data.lore != null) {
-                List<Component> loreComponents = data.lore.stream().map(s -> s != null ? Component.text(s) : null).collect(Collectors.toList());
-                meta.lore(loreComponents);
+                meta.setLore(data.lore); // Setzt die Lore als List<String> (Legacy)
             }
             if (data.name != null) {
                 meta.displayName(Component.text(data.name));
