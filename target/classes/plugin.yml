@@ -1,0 +1,6 @@
+name: LoreBlockSaver
+version: 1.0.0
+main: de.dgamerworlds.LoreBlocks.LoreBlockSaver
+api-version: 1.19
+author: Dgamerworlds
+description: Stores item lores and also appends them when the item is placed and mined.
