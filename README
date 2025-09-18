@@ -1,0 +1,25 @@
+Welcome to the "BlockLoreSaver" plugin.
+I created this plugin because I want to create a Minecraft server.
+
+It's very unlikely that there will be frequent updates.
+By the way, and yes, the plugin is from Germany.
+
+Instructions:
+- Install Maven
+Here's the link:
+https://maven.apache.org/download.cgi
+- Run the following command in the project folder:
+"mvn clean package"
+- A .jar file will appear in the /Target folder.
+
+Download it to your plugins folder.
+
+License:
+- You may upload it anywhere with this link.
+- You may not claim it as your own.
+- You may not earn anything from it.
+Otherwise, do what you want. ^^
+
+Author: Dgamerworlds
+Link to another product of mine (in German)
+https://findix.ct.ws
