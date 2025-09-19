@@ -51,15 +51,15 @@ public class LoreBlockSaver extends JavaPlugin implements Listener {
 
     @EventHandler
     public void onBlockPlace(BlockPlaceEvent e) {
+        Block block = e.getBlockPlaced();
+        // Ignoriere Shulker Boxen
+        if (block.getType().name().contains("SHULKER_BOX")) return;
         ItemStack item = e.getItemInHand();
         if (item.hasItemMeta()) {
             ItemMeta meta = item.getItemMeta();
-            Block block = e.getBlockPlaced();
             String key = getBlockKey(block);
-            List<Component> loreComponents = meta.lore();
-            List<String> lore = loreComponents != null ? loreComponents.stream().map(c -> c != null ? PlainTextComponentSerializer.plainText().serialize(c) : null).collect(Collectors.toList()) : null;
-            Component displayNameComponent = meta.displayName();
-            String name = displayNameComponent != null ? PlainTextComponentSerializer.plainText().serialize(displayNameComponent) : null;
+            List<String> lore = meta.getLore();
+            String name = meta.hasDisplayName() ? meta.getDisplayName() : null;
             blockDataMap.put(key, new BlockData(lore, name, block.getType().name()));
         }
     }
@@ -67,6 +67,8 @@ public class LoreBlockSaver extends JavaPlugin implements Listener {
     @EventHandler
     public void onBlockBreak(BlockBreakEvent e) {
         Block block = e.getBlock();
+        // Ignoriere Shulker Boxen
+        if (block.getType().name().contains("SHULKER_BOX")) return;
         String key = getBlockKey(block);
         if (blockDataMap.containsKey(key)) {
             e.setDropItems(false);
@@ -74,10 +76,10 @@ public class LoreBlockSaver extends JavaPlugin implements Listener {
             ItemStack drop = new ItemStack(block.getType());
             ItemMeta meta = drop.getItemMeta();
             if (data.lore != null) {
-                meta.setLore(data.lore); // Setzt die Lore als List<String> (Legacy)
+                meta.setLore(data.lore);
             }
             if (data.name != null) {
-                meta.displayName(Component.text(data.name));
+                meta.setDisplayName(data.name);
             }
             drop.setItemMeta(meta);
             block.getWorld().dropItemNaturally(block.getLocation(), drop);
