@@ -1,8 +1,17 @@
-Welcome to the "BlockLoreSaver" plugin.
-I created this plugin because I want to create a Minecraft server.
+Since 1.1.0 /rename and /lore are available!
 
-It's very unlikely that there will be frequent updates.
-By the way, and yes, the plugin is from Germany.
+If you notice any bugs, please report them in the upcoming Discord server!
+
+Other information:
+This plugin actually supports a LOT of versions.
+Just give it a try!
+
+If you see this message in the console,
+the plugin is activated!:
+
+I hope this solved one of your problems!
+
+And for the Open Source Place:
 
 Instructions:
 - Install Maven
@@ -19,7 +28,3 @@ License:
 - You may not claim it as your own.
 - You may not earn anything from it.
 Otherwise, do what you want. ^^
-
-Author: Dgamerworlds
-Link to another product of mine (in German)
-https://findix.ct.ws

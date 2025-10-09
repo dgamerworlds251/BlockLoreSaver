@@ -38,6 +38,8 @@ public class LoreBlockSaver extends JavaPlugin implements Listener {
         }
         dataConfig = YamlConfiguration.loadConfiguration(dataFile);
         loadBlockData();
+        getCommand("lore").setExecutor(new LoreCommand());
+        getCommand("rename").setExecutor(new LoreCommand());
     }
 
     @Override
