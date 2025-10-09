@@ -1,5 +1,17 @@
+<<<<<<< HEAD
 Since 1.1.0 /rename and /lore are available!
 
+=======
+Welcome to my plugin :D
+
+This plugin saves lore and renames even after the block has been placed and removed.
+
+This plugin is not added with something like /rename.
+We therefore recommend:
+- Essentials | /itemrename or /itemlore
+- Itemedit | /ie rename or /ie lore
+
+>>>>>>> a395de4918165abe48e7bde2611882eebdfaaf73
 If you notice any bugs, please report them in the upcoming Discord server!
 
 Other information:
@@ -27,4 +39,8 @@ License:
 - You may upload it anywhere with this link.
 - You may not claim it as your own.
 - You may not earn anything from it.
+<<<<<<< HEAD
 Otherwise, do what you want. ^^
+=======
+Otherwise, do what you want. ^^
+>>>>>>> a395de4918165abe48e7bde2611882eebdfaaf73
